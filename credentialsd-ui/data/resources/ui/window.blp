@@ -7,7 +7,6 @@ template $CredentialsUiWindow: ApplicationWindow {
   Box {
     orientation: vertical;
     halign: center;
-    width-request: 600;
     margin-start: 32;
     margin-end: 32;
     margin-bottom: 48;
@@ -15,27 +14,26 @@ template $CredentialsUiWindow: ApplicationWindow {
 
     Label {
       label: bind template.view-model as <$CredentialManagerViewModel>.title;
+      wrap: true;
+      wrap-mode: word_char;
+      justify: center;
 
       styles [
         "title-header",
       ]
     }
 
-    Box {
-      orientation: vertical;
-      margin-start: 100;
-      margin-end: 100;
+    Label {
+      label: bind template.view-model as <$CredentialManagerViewModel>.subtitle;
+      wrap: true;
+      wrap-mode: word_char;
+      justify: center;
+      use-markup: true;
+      max-width-chars: 50;
 
-      Label {
-        label: bind template.view-model as <$CredentialManagerViewModel>.subtitle;
-        wrap: true;
-        use-markup: true;
-        width-request: 550;
-
-        styles [
-          "subtitle-header",
-        ]
-      }
+      styles [
+        "subtitle-header",
+      ]
     }
 
     Separator {}
@@ -81,6 +79,7 @@ template $CredentialsUiWindow: ApplicationWindow {
               hexpand: true;
               label: bind template.view-model as <$CredentialManagerViewModel>.scan_qr_prompt;
               wrap: true;
+              wrap-mode: word_char;
             }
 
             Overlay {
@@ -152,6 +151,7 @@ template $CredentialsUiWindow: ApplicationWindow {
               xalign: 0;
               label: bind template.view-model as <$CredentialManagerViewModel>.activate_usb_prompt;
               wrap: true;
+              wrap-mode: word_char;
             }
           }
         };
@@ -183,7 +183,8 @@ template $CredentialsUiWindow: ApplicationWindow {
           Label security_key_label {
             label: bind template.view-model as <$CredentialManagerViewModel>.prompt;
             wrap: true;
-            width-request: 300;
+            wrap-mode: word_char;
+            max-width-chars: 30;
 
             styles [
               "instructions",
@@ -227,7 +228,8 @@ template $CredentialsUiWindow: ApplicationWindow {
           Label {
             label: bind template.view-model as <$CredentialManagerViewModel>.prompt;
             wrap: true;
-            width-request: 300;
+            wrap-mode: word_char;
+            max-width-chars: 30;
 
             styles [
               "instructions",
@@ -289,6 +291,7 @@ template $CredentialsUiWindow: ApplicationWindow {
           Label set_pin_instructions_label {
             label: _("Please choose a new PIN for your device.");
             wrap: true;
+            wrap-mode: word_char;
 
             styles [
               "instructions",
@@ -382,6 +385,7 @@ template $CredentialsUiWindow: ApplicationWindow {
             label: bind template.view-model as <$CredentialManagerViewModel>.prompt;
             margin-start: 24;
             wrap: true;
+            wrap-mode: word_char;
           }
 
           Box {
