@@ -289,7 +289,7 @@ impl CredentialsUiWindow {
     }
 
     fn set_window_size(&self) {
-        let width = 200;
+        let width = 600;
         let height = 400;
 
         self.set_default_size(width, height);
