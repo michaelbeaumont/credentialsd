@@ -2308,7 +2308,7 @@ dependencies = [
 [[package]]
 name = "libwebauthn"
 version = "0.10.0"
-source = "git+https://github.com/michaelbeaumont/libwebauthn.git?branch=fix%2Fstop-scans#ff9c3b5f3abe64be390409509437de8a754e0ceb"
+source = "git+https://github.com/michaelbeaumont/libwebauthn.git?branch=test#0865bd04832266626ef735884fc303b11cf272f6"
 dependencies = [
  "aes",
  "aes-gcm",

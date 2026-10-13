@@ -20,7 +20,7 @@ base64 = "=0.22.1"
 futures = "=0.3.33"
 libwebauthn = {
   git = "https://github.com/michaelbeaumont/libwebauthn.git",
-  branch = "fix/stop-scans",
+  branch = "test",
   features = ["nfc-backend-libnfc", "nfc-backend-pcsc", "reqwest-related-origins-source"]
 }
 nfc1 = { version = "=0.7.1", default-features = false }
